@@ -8,16 +8,16 @@ using namespace std;
 int main() {
     // input;
     output;
-    list<int> listita; 
-    listita.push_back(1);
+    list<int> listita;  //se crea una lista
+    listita.push_back(1); //se la llena con esos valores
     listita.push_back(2);
     listita.push_back(3);
-    list<int>::iterator it;
+    list<int>::iterator it; //se crea un iterador para seguir las listas
 
-    it = listita.end();
+    it = listita.end(); //iterador al final
     cout << *it << endl;
     
-    for (it = listita.begin(); it != listita.end(); it++) {
+    for (it = listita.begin(); it != listita.end(); it++) { 
         cout << *it << endl;
     }
 

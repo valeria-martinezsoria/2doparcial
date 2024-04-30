@@ -7,27 +7,23 @@ using namespace std;
 
 int main() {
     input;
-    // Obtener el número de nodos del grafo.
-    int numNodos;
+   
+    int numNodos; //poner numero de nodos
     std::cin >> numNodos;
 
     vector<int> grafo[numNodos]; // Lista de adyacencia para representar el grafo. 
     
-    // Obtener el número de aristas del grafo.
-    int numAristas;
+    int numAristas;//poner numero de aristas
     cin >> numAristas;
 
-    // Leer las aristas e insertarlas en la lista de adyacencia.
-    for (int i = 0; i < numAristas; i++) {
+    
+    for (int i = 0; i < numAristas; i++) { //lee aristas y las pone en la matriz
         int nodoOrigen, nodoDestino;
         cin >> nodoOrigen >> nodoDestino;
-        // Añadir el nodo destino a la lista del nodo origen para representar una arista.
-        grafo[nodoOrigen].push_back(nodoDestino);
+        grafo[nodoOrigen].push_back(nodoDestino); //anadir en su lugar
     }
 
-    // Imprimir la lista de adyacencia del grafo.
-    for (int i = 0; i < numNodos; i++) {
-        // Imprimir cada nodo conectado al nodo 'i'.
+    for (int i = 0; i < numNodos; i++) { //impirmir lista de adyacencia
         for (int j = 0; j < grafo[i].size(); j++) {
             cout << "[" << grafo[i][j] << "]";
         }

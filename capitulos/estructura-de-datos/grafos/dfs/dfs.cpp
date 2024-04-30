@@ -29,12 +29,12 @@ void dfs (int nodoInicial) {
 
 int main() {
     input;
-    int nodos, aristas;
+    int nodos, aristas; //numero de nodos y de aristas 
     cin>>nodos>>aristas; // 11 19
-    for(int i = 0 ; i < aristas; i++ ) {
+    for(int i = 0 ; i < aristas; i++ ) { //lee todo lo que se encuentre
         int nodoInicial, nodoFinal;
-        cin>>nodoInicial>>nodoFinal;
-        grafo[nodoInicial].push_back(nodoFinal);
+        cin>>nodoInicial>>nodoFinal; //imprime
+        grafo[nodoInicial].push_back(nodoFinal);//pone el nodo inicial en el final
     }
     // Si el nodo S puede llegar al nodo T
     int S,T; // 1 7
