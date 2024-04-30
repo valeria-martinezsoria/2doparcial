@@ -9,28 +9,21 @@ using namespace std;
 int main() {
     input;
     output;
-    // Solicitar al usuario el número de nodos en el grafo.
-    int numNodos;
+    int numNodos; //se le pide al usuario el numero de nodos y se los lee
     cin >> numNodos;
 
-    // Crear una matriz de adyacencia para representar el grafo.
-    int grafo[numNodos][numNodos];
+    int grafo[numNodos][numNodos]; //se crea matriz adyacente
     memset(grafo, 0, sizeof(grafo));
 
-    // Solicitar al usuario el número de aristas en el grafo.
-    int numAristas;
+    int numAristas; //crar numero de aristas y leerlas
     cin >> numAristas;
 
-    // Leer las aristas y actualizar la matriz de adyacencia.
-    for (int i = 0; i < numAristas; i++) {
+    for (int i = 0; i < numAristas; i++) { //lee aristas y las pone en la matriz
         int nodoOrigen, nodoDestino;
         cin >> nodoOrigen >> nodoDestino;
-        // Establecer a 1 para indicar una arista dirigida del nodo origen al nodo destino.
-        grafo[nodoOrigen][nodoDestino] = 1;
+        grafo[nodoOrigen][nodoDestino] = 1; //ponerla desde la posicion 1
     }
-
-    // Imprimir la matriz de adyacencia para visualizar el grafo.
-    for (int i = 0; i < numNodos; i++) {
+    for (int i = 0; i < numNodos; i++) { //impirmir matriz
         for (int j = 0; j < numNodos; j++) {
             cout << "[" << grafo[i][j] << "]";
         }
